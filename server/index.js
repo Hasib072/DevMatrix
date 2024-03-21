@@ -1,17 +1,18 @@
 const express = require("express")
 const mongoose = require("mongoose")
 const cors = require("cors")
-const EmployeeModel = require("./model/Employee")
+// const EmployeeModel = require("./model/Employee")
+const UserModel = require("./model/User")
 
 const app = express()
 app.use(express.json())
 app.use(cors())
 
-mongoose.connect("mongodb://127.0.0.1:27017/employee");
+mongoose.connect("mongodb+srv://mirrahman:MirPassword72@devmatrixcluster.orok5jg.mongodb.net/?retryWrites=true&w=majority&appName=DevMatrixCluster");
 
 app.post("/login", (req, res) => {
     const {email, password} = req.body;
-    EmployeeModel.findOne({email : email})
+    UserModel.findOne({email : email})
     .then(user => {
         if(user) {
             if(user.password === password){
@@ -26,7 +27,7 @@ app.post("/login", (req, res) => {
 })
 
 app.post("/register", (req, res) => {
-    EmployeeModel.create(req.body)
+    UserModel.create(req.body)
     .then(employees => res.json(employees))
     .catch(err => res.json(err))
 })
