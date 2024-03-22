@@ -26,6 +26,7 @@ body{
     justify-content: center;
     align-items: center;
     top: 20px;
+    right: -12px;
     
   }
 
@@ -69,7 +70,7 @@ body{
   width: 266px;
   height: 65.22px;
   position: relative;
-  top: 20px;
+  top: 0px;
   border-radius: 15px;
   font-size: 32px;
   font-family: "Open Sans", sans-serif;
@@ -136,31 +137,32 @@ body{
   .FP{
   position: relative;
   left: 113px;
+  top: -20px;
   color: #ffffff79;
   font-size: 22px;
   text-decoration: none;
   }
   
   .FP:hover{
-  text-decoration:underline;
+  text-decoration:none;
   color: #ffffff9d;
   }
   
-  .line1{
+  .line1_login{
   filter: invert();
   height: 8px;
   width: 120px;
   position: relative;
-  top: 33px;
+  top: 18px;
   right: 90px;
   }
   
-  .line2{
+  .line2_login{
   filter: invert();
   height: 8px;
   width: 120px;
   position: relative;
-  top: 33px;
+  top: 18px;
   left: 90px;
   }
   
@@ -172,33 +174,33 @@ body{
   bottom: 18px;;
   }
   
-  .google_logo{
+  .google_logo_login{
   filter: invert();
   width: 65px;
   height: 65px;
-  top:-30px;
+  top:-20px;
   position:relative;
   right: 30px;
   }
   
-  .github_logo{
+  .github_logo_login{
   filter: invert();
   width: 65px;
   height: 65px;
   position:relative;
-  top:-30px;
+  top:-20px;
   left: 30px;
   }
   
-  .last_line{
+  .last_line_login{
   color: rgba(255, 255, 255, 0.553);
   position: relative;
-  bottom: 25px;
+  bottom: 0px;
   }
   
   .login{
   color: rgba(255, 255, 255, 0.553);
-  text-decoration: none;
+  text-decoration: underline;
   }
   
   .login:hover{
