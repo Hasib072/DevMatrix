@@ -1,7 +1,8 @@
 html,
 body{
-  width: 100%;
-overflow-x: hidden;
+    scroll-snap-stop: normal;
+    width: 100%;
+    overflow-x: hidden;
     min-height: 100%;
     background-color: black;
 }
@@ -80,18 +81,96 @@ overflow-x: hidden;
     text-align: center;
     margin-top: 20px;
 }
-.rectangle{
-    height : 500px;
-    width: 800px;
-    background-color: #e5dbdb;
-    margin-left: 20%;
-    margin-bottom: 20%;
-    margin-top: 10%;
-}
-.footer{
-    background-color: rgba(2, 22, 5, 0.755);
+.flex-container {
+    display: flex;
+    margin-top: 50px;
+    margin-left: 200px;
+    flex-wrap: wrap;
+  }
+
+.leftdiv>h4>p{
+    background-color: black;
     color: white;
-   height: 900px;
-    width:100%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:small;
+    
+}
+.middiv1>h4>p{
+    background-color: black;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:small;
+
+}
+.middiv2>h4>p{
+    background-color: black;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:small;
+
+}
+.rightdiv>h4>p{
+    background-color: black;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:small;
 }
 
+.lastdiv{
+    background-color:#02B794;
+    width:100%;
+    margin-top: 30px;
+
+}
+
+.footer{
+   color: rgb(229, 237, 229);
+   
+   
+     display: flex;
+}
+.logo{
+    
+    height:100px;
+    width: 100px;
+    margin-top: 40px;
+    margin-left: 30px;
+    
+}
+.icons{
+
+    margin-left: 30px;
+
+}
+
+.footer>div>h3{
+
+    font-size: small;
+    color: black;
+    margin-left: 30px;
+
+}
+.three>div>ul>li{
+
+    font-size:x-small;
+}
+.line{
+    height:300px;
+    width:4px;
+    background-color: rgb(19, 18, 18);
+    margin-left: 500px;
+    margin-top: 40px;
+}
+.three{
+    display: flex;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+.last{
+    margin-bottom: 1px;
+    height: 300px;
+    margin-right: 5%;
+    
+
+    
+}
