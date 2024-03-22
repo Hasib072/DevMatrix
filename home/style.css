@@ -65,7 +65,7 @@ overflow-x: hidden;
 }
 .green{
 
-    color:rgb(6, 134, 92)
+    color:#02B794
 
 }
 .toppick-div{
@@ -95,3 +95,18 @@ overflow-x: hidden;
     width:100%;
 }
 
+.au{
+    font-size: 42px;
+}
+
+.ht{
+    font-size: 17.5px;
+    color:#02B794;
+}
+
+
+#embt{
+    border-radius: 75px;
+    height: 50px;
+    width: 255px;
+}
