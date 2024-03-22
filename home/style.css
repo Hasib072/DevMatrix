@@ -66,7 +66,7 @@ body{
 }
 .green{
 
-    color:rgb(6, 134, 92)
+    color:#02B794
 
 }
 .toppick-div{
@@ -152,6 +152,7 @@ body{
 }
 .three>div>ul>li{
 
+
     font-size:x-small;
 }
 .line{
@@ -170,7 +171,4 @@ body{
     margin-bottom: 1px;
     height: 300px;
     margin-right: 5%;
-    
-
-    
 }
