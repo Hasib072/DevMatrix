@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from 'axios'
 import { useNavigate } from "react-router-dom";
+import './signup.css';
 
 function Signup() {    
 
@@ -21,57 +22,29 @@ function Signup() {
 
 
   return (
-    <div className="d-flex justify-content-center align-items-center bg-secondary vh-100">
-        <div className="bg-white p-3 rounded w-25">
-        <h2><center>Sign Up</center></h2>
-
-            <form onSubmit={handleSubmit}>
-                <div className="mb-3">
-                    <label htmlFor="email">
-                        <strong>Name</strong>
-                    </label>
-                    <input type="text" 
-                    placeholder='Enter Name' 
-                    autoComplete='off' 
-                    name='email' 
-                    className='form-control rounded-0'
-                    onChange={(e) => setName(e.target.value)}
-                    />
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="email">
-                        <strong>Email</strong>
-                    </label>
-                    <input type="text" 
-                    placeholder='Enter Email' 
-                    autoComplete='off' 
-                    name='email' 
-                    className='form-control rounded-0' 
-                    onChange={(e) => setEmail(e.target.value)}
-
-                    />
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="email">
-                        <strong>Password</strong>
-                    </label>
-                    <input type="password" 
-                    placeholder='Enter Password' 
-                    name='password' 
-                    className='form-control rounded-0' 
-                    onChange={(e) => setPassword(e.target.value)}
-
-                    />
-                </div>
-                <button type="submit" className="btn btn-success w-100 rounded-0">
-                    Sign Up
-                </button>
-                </form>
-                <p>Already have an account?</p>
-                <Link to="/login" className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none">
-                    Login
-                </Link>
-            
+    <div className="signup_body">
+        <h1 className="signup_head">Sign up</h1>
+        <div className="Form_body p-3 rounded w-25">
+        <form className="signup_form" onSubmit={handleSubmit}>
+          <label className="user_label"  for="name">Username</label><br/>
+          <input className="user_input" type="text" id="name" autoComplete='off' onChange={(e) => setName(e.target.value)} required/>
+          <br/>
+          <label className="email_label" for="email">E-mail</label><br/>  
+          <input className="email_input" type="text" id="email" autoComplete='off' onChange={(e) => setEmail(e.target.value)} required/>
+          <br/><br/>
+          <label className="pass_label" for="password">Password</label><br/><br/>
+          <input className="pass_input" type="password" id="password" autoComplete='off' onChange={(e) => setPassword(e.target.value)} required/>
+          <br/>
+          <button className="signup_but" type="submit">Sign up</button>
+          <br/>
+          <img className="line1" src="https://i.ibb.co/BqcnZt5/minus.png" alt=""/>
+          <img className="line2" src="https://i.ibb.co/BqcnZt5/minus.png" alt=""/>
+          <p className="line_text">Signup With</p><br/>
+          <a href=""><img className="google_logo" src="https://i.ibb.co/NLpbPGm/social.png" alt=""/></a>
+          <a href=""><img className="github_logo" src="https://i.ibb.co/K5Xx5sZ/github.png" alt=""/></a>
+          <p className="last_line">Already have an account?<b> <Link className="signup" to="/login"><a className="signup">Log in</a></Link></b></p><br/><br/>
+          
+        </form>
         </div>
     </div>
   );
