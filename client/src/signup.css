@@ -215,8 +215,8 @@ body{
   }
 
   .signup{
-  color: rgb(255, 255, 255);
-  text-decoration: none;
+    color: rgba(255, 255, 255, 0.553);
+  text-decoration: underline;
   }
   
   .signup:hover{

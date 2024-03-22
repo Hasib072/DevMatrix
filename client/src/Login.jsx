@@ -43,12 +43,12 @@ function Login() {
                 <br/>
                 <a href=""><button onclick="" className="login_but">Sign in</button></a>
                 <br/>
-                <img className="line1" src="https://i.ibb.co/BqcnZt5/minus.png" alt=""/>
-                <img className="line2" src="https://i.ibb.co/BqcnZt5/minus.png" alt=""/>
+                <img className="line1_login" src="https://i.ibb.co/BqcnZt5/minus.png" alt=""/>
+                <img className="line2_login" src="https://i.ibb.co/BqcnZt5/minus.png" alt=""/>
                 <p className="line_text">Login With</p>
-                <a href=""><img className="google_logo" src="https://i.ibb.co/NLpbPGm/social.png" alt=""/></a>
-                <a href=""><img className="github_logo" src="https://i.ibb.co/K5Xx5sZ/github.png" alt=""/></a>
-                <p className="last_line">Don't have an account?<b><Link to="/register"><a className="login">Sign up</a></Link></b></p>
+                <a href=""><img className="google_logo_login" src="https://i.ibb.co/NLpbPGm/social.png" alt=""/></a>
+                <a href=""><img className="github_logo_login" src="https://i.ibb.co/K5Xx5sZ/github.png" alt=""/></a>
+                <p className="last_line_login">Don't have an account? <b><Link  to="/register"><a className="login">Sign up</a></Link></b></p>
             </form>
         </div>
         </div>
