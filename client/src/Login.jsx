@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from 'axios'
 import { useNavigate } from "react-router-dom";
+import './Login.css';
+
 
 function Login() {    
 
@@ -28,47 +30,28 @@ function Login() {
 
 
   return (
-    <div className="d-flex justify-content-center align-items-center bg-secondary vh-100">
-        <div className="bg-white p-3 rounded w-25">
-            <h2><center>Login</center></h2>
-            <form onSubmit={handleSubmit}>
-                
-                <div className="mb-3">
-                    <label htmlFor="email">
-                        <strong>Email</strong>
-                    </label>
-                    <input type="text" 
-                    placeholder='Enter Email' 
-                    autoComplete='off' 
-                    name='email' 
-                    className='form-control rounded-0' 
-                    onChange={(e) => setEmail(e.target.value)}
-
-                    />
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="email">
-                        <strong>Password</strong>
-                    </label>
-                    <input type="password" 
-                    placeholder='Enter Password' 
-                    name='password' 
-                    className='form-control rounded-0' 
-                    onChange={(e) => setPassword(e.target.value)}
-
-                    />
-                </div>
-                <button type="submit" className="btn btn-success w-100 rounded-0">
-                    Login
-                </button>
-                </form>
-                <p>Don't have an account?</p>
-                <Link to="/register" className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none">
-                    Sign Up
-                </Link>
-            
+    <div className="login_body">
+        <h1 className="login_head">Login</h1>
+        <div className="Form_body p-3 rounded w-25">
+            <form className="login_form" onSubmit={handleSubmit}>
+                <label className="user_label"  htmlFor="name">Username or E-mail</label><br/>
+                <input className="user_input" type="text" id="name" onChange={(e) => setEmail(e.target.value)} />
+                <label className="pass_label" htmlFor="password">Password</label><br/>  
+                <input className="pass_input" type="password" id="password" onChange={(e) => setPassword(e.target.value)} />
+                <br/><br/>
+                <a className="FP" href="">Forgot Password?</a>
+                <br/>
+                <a href=""><button onclick="" className="login_but">Sign in</button></a>
+                <br/>
+                <img className="line1" src="https://i.ibb.co/BqcnZt5/minus.png" alt=""/>
+                <img className="line2" src="https://i.ibb.co/BqcnZt5/minus.png" alt=""/>
+                <p className="line_text">Login With</p>
+                <a href=""><img className="google_logo" src="https://i.ibb.co/NLpbPGm/social.png" alt=""/></a>
+                <a href=""><img className="github_logo" src="https://i.ibb.co/K5Xx5sZ/github.png" alt=""/></a>
+                <p className="last_line">Don't have an account?<b><Link to="/register"><a className="login">Sign up</a></Link></b></p>
+            </form>
         </div>
-    </div>
+        </div>
   );
 }
 

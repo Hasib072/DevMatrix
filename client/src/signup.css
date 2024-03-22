@@ -66,7 +66,7 @@ body{
   width: 266px;
   height: 65.22px;
   position: relative;
-  top: 20px;
+  top: 10px;
   border-radius: 15px;
   font-size: 32px;
   font-family: "Open Sans", sans-serif;
@@ -89,38 +89,37 @@ body{
   height: 60px;
   }
   
-  .user_label{ 
-  color: rgba(255, 255, 255, 0.436);
-  position: relative;
-  right: 142px;
-  bottom: 25px;
-  font-size: 22px;
-  }
-  
-  .email_label{ 
-  color: rgba(255, 255, 255, 0.436);
-  position: relative;
-  right: 160px;
-  bottom: 1px;
-  font-size: 22px;
-  }
-  
-  .pass_label{
+  .user_label_signup{ 
     color: rgba(255, 255, 255, 0.436);
+    position: relative;
+    right: 134px;
+    bottom: 25px;
+    font-size: 22px;
+    }
+  
+  .email_label_signup{ 
+  color: rgba(255, 255, 255, 0.436);
   position: relative;
-  right: 144px;
+  right: 152px;
+  font-size: 22px;
+  }
+  
+  .pass_label_signup{
+  color: rgba(255, 255, 255, 0.436);
+  position: relative;
+  right: 137px;
   bottom: 1px;
   font-size: 22px;
   }
 
-  .pass_input{
-    border: none;
+  .pass_input_signup{
+  border: none;
   background-color: rgba(79, 78, 78, 0.436) ;
   width: 386px;
   height: 61px;
   border-radius: 15px;
   position: relative;
-  bottom: 20px;  
+  bottom: 28px;  
   color: white;
   font-size: 20px;
   padding-left: 15px;
@@ -165,7 +164,7 @@ body{
   color: #ffffff9d;
   }
 
-  .line1{
+  .line1_signup{
   filter: invert();
   height: 8px;
   width: 120px;
@@ -174,7 +173,7 @@ body{
   right: 90px;
   }
 
-  .line2{
+  .line2_signup{
   filter: invert();
   height: 8px;
   width: 120px;
@@ -183,7 +182,7 @@ body{
   left: 90px;
   }
   
-  .line_text{
+  .line_text_signup{
   color:rgba(255, 255, 255, 0.436);
   font-family: "Open Sans", sans-serif;
   font-size: 25px;
