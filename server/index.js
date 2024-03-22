@@ -1,7 +1,6 @@
 const express = require("express")
 const mongoose = require("mongoose")
 const cors = require("cors")
-// const EmployeeModel = require("./model/Employee")
 const UserModel = require("./model/User")
 
 const app = express()
@@ -21,14 +20,25 @@ app.post("/login", (req, res) => {
                 res.json("The password is incorrect")
             }
         }else{
-            res.json("No record existed")
+            UserModel.findOne({user_name : email})
+            .then(user => {
+                if(user) {
+                    if(user.password === password){
+                        res.json("Success")
+                    }else{
+                        res.json("The password is incorrect")
+                    }
+                }else{
+                    res.json("No record existed")
+                }
+            })
         }
     })
 })
 
 app.post("/register", (req, res) => {
     UserModel.create(req.body)
-    .then(employees => res.json(employees))
+    .then(user => res.json(user))
     .catch(err => res.json(err))
 })
 
