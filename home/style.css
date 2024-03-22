@@ -1,0 +1,97 @@
+html,
+body{
+  width: 100%;
+overflow-x: hidden;
+    min-height: 100%;
+    background-color: black;
+}
+
+.navbar{
+    background: rgb(203,228,222);
+    background: linear-gradient(180deg, rgba(203,228,222,0.4872805811777836) 0%, rgba(216,235,230,0) 50%);
+    
+}
+.nav-link{
+     color: rgb(243, 230, 230); 
+}
+
+.hero{ height:600px;
+    background-image: url('./Hero\ Containers\ \(1\).png');
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center center;
+    background-color: black;
+    position:relative;
+    top:0px;
+
+}
+
+
+.text1{
+      color:white;
+      text-align: left;
+      padding-top: 30%;
+      padding-left: 0%;
+      margin-left: -300px;
+      margin-top: -100px;
+
+}
+.text2{
+
+    color:grey;
+    text-align: left;
+    margin-left: -300px;
+
+
+}
+.twobtn1{
+
+    border-radius: 10px;
+
+
+    
+
+}
+.twobtn2{
+
+    border-radius: 10px;
+
+    
+}
+.btngrp{
+
+    margin-left: -900px;
+
+}
+.green{
+
+    color:rgb(6, 134, 92)
+
+}
+.toppick-div{
+    background-color: black;
+    height:100px;
+    font-size: medium;
+
+}
+.about{
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+.rectangle{
+    height : 500px;
+    width: 800px;
+    background-color: #e5dbdb;
+    margin-left: 20%;
+    margin-bottom: 20%;
+    margin-top: 10%;
+}
+.footer{
+    background-color: rgba(2, 22, 5, 0.755);
+    color: white;
+   height: 900px;
+    width:100%;
+}
+
