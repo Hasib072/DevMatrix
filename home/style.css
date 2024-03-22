@@ -104,6 +104,9 @@ overflow-x: hidden;
     color:#02B794;
 }
 
-.embt{
-    le
+
+#embt{
+    border-radius: 75px;
+    height: 50px;
+    width: 255px;
 }
