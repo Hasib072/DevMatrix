@@ -24,6 +24,7 @@
   },
   email: {
       type: String,
+      unique: true
 
   },
   dob: {
