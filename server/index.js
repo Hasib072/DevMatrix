@@ -2,6 +2,7 @@ const express = require("express")
 const mongoose = require("mongoose")
 const cors = require("cors")
 const UserModel = require("./model/User")
+const ElementModel = require("./model/Element")
 
 const app = express()
 app.use(express.json())
@@ -24,7 +25,7 @@ app.post("/login", (req, res) => {
             .then(user => {
                 if(user) {
                     if(user.password === password){
-                        res.json("Success")
+                        res.json("Successfully loggedin " + email)
                     }else{
                         res.json("The password is incorrect")
                     }
@@ -42,6 +43,18 @@ app.post("/register", (req, res) => {
     .catch(err => res.json(err))
 })
 
+app.post("/create", (req, res) => {
+    ElementModel.create(req.body)
+    .then(element => res.json(element))
+    .catch(err => res.json(err))
+})
+
+app.get("/elements", (req, res) => {
+    ElementModel.find({})
+      .then(elements => res.json(elements))
+      .catch(err => res.json(err));
+  });
+  
 
 app.listen(3001, () => {
     console.log("server is running")

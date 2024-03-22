@@ -34,7 +34,14 @@
   bio: {
       type: String,
       
-  }
+  },
+  git_account: {
+    type: String,
+    
+  },
+  website: {
+    type: String,
+}
  })
 
  const UserModel = mongoose.model("User", UserSchema)
