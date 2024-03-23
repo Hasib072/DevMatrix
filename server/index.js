@@ -50,9 +50,82 @@ app.post("/create", (req, res) => {
 })
 
 app.get("/elements", (req, res) => {
-    ElementModel.find({})
+    ElementModel.find()
       .then(elements => res.json(elements))
       .catch(err => res.json(err));
+  });
+
+  app.get("/users", (req, res) => {
+    UserModel.find()
+      .then(user => res.json(user))
+      .catch(err => res.json(err));
+  });
+
+
+app.get("/elements/by-user", (req, res) => {
+    // Extract user_name from the request query parameters
+    const userName = req.query.user_name;
+    // Check if user_name was provided
+    if (!userName) {
+      return res.status(400).json({ error: "user_name query parameter is required" });
+    }
+  
+    // Find elements by user_name
+    ElementModel.find({ user_name: userName })
+      .then(elements => res.json(elements))
+      .catch(err => res.status(500).json(err));
+  });
+
+  app.delete("/delelements", (req, res) => {
+    // Extract user_name and element_name from query parameters
+    const { user_name, element_name } = req.query;
+  
+    // Check if both query parameters are provided
+    if (!user_name || !element_name) {
+      return res.status(400).json({ error: "user_name and element_name query parameters are required" });
+    }
+  
+    // Use both parameters to find and delete the element
+    ElementModel.findOneAndDelete({ user_name: user_name, element_name: element_name })
+      .then(deletedElement => {
+        if (!deletedElement) {
+          // No element found to delete
+          return res.status(404).json({ error: "Element not found" });
+        }
+        // Element deleted successfully
+        res.json({ message: "Element deleted successfully" });
+      })
+      .catch(err => {
+        // Handle errors (e.g., database errors)
+        res.status(500).json({ error: "Server error" });
+      });
+  });
+  
+  app.put("/elements/like", (req, res) => {
+    const { user_name, element_name } = req.query;
+  
+    // Validate the presence of user_name and element_name
+    if (!user_name || !element_name) {
+      return res.status(400).json({ error: "user_name and element_name query parameters are required" });
+    }
+  
+    // Find the element and increment the likes counter
+    ElementModel.findOneAndUpdate(
+      { user_name: user_name, element_name: element_name },
+      { $inc: { likes: 1 } }, // Increment likes
+      { new: true } // Return the updated document
+      
+    )
+    .then(updatedElement => {
+        console.log(updatedElement);
+      if (!updatedElement) {
+        return res.status(404).json({ error: "Element not found" });
+      }
+      res.json({ message: "Element liked successfully", element: updatedElement });
+    })
+    .catch(err => {
+      res.status(500).json({ error: "Server error" });
+    });
   });
   
 

@@ -34,6 +34,14 @@
     type: Boolean,
     default: false
   },
+  likes: {
+    type: Number,
+    default: 0
+  },
+  saves: {
+    type: Number,
+    default: 0
+  },
  })
 
  const ElementModel = mongoose.model("Element", ElementSchema)

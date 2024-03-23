@@ -35,9 +35,9 @@ function Login() {
         <div className="Form_body p-3 rounded w-25">
             <form className="login_form" onSubmit={handleSubmit}>
                 <label className="user_label"  htmlFor="name">Username or E-mail</label><br/>
-                <input className="user_input" type="text" id="name" onChange={(e) => setEmail(e.target.value)} />
+                <input className="user_input" type="text" id="name" autoComplete='off' onChange={(e) => setEmail(e.target.value)} />
                 <label className="pass_label" htmlFor="password">Password</label><br/>  
-                <input className="pass_input" type="password" id="password" onChange={(e) => setPassword(e.target.value)} />
+                <input className="pass_input" type="password" id="password" autoComplete='off' onChange={(e) => setPassword(e.target.value)} />
                 <br/><br/>
                 <a className="FP" href="">Forgot Password?</a>
                 <br/>
