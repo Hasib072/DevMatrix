@@ -23,9 +23,19 @@
       trim: true
   },
   email: {
-      type: String,
-      unique: true
-
+    type: String,
+    required: [true, "Email is required"],
+    unique: true, 
+    trim: true, 
+    lowercase: true,
+    validate: {
+      validator: function(email) {
+        // Simple regex for basic email validation
+        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+      },
+      message: props => `${props.value} is not a valid email address!`
+    },
   },
   dob: {
       type: Date,
