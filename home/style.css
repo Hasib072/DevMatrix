@@ -112,23 +112,23 @@ overflow-x: hidden;
 }
 .slider {
     position: relative;
-    max-width: 1300px;
+    max-width: 1700px;
     margin: auto;
-  
-  }
+}
   
   .slides {
     display: flex;
     overflow-x: hidden;
+    border-radius: 25px;
   
   }
   
   .slides img {
-    padding-left: 25px;
     width: 400px;
     border-radius: 25px;
     height: 340px;
     transition: transform 0.5s ease;
+    padding: 14px;
   }
   
   button {
