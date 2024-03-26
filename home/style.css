@@ -110,3 +110,43 @@ overflow-x: hidden;
     height: 50px;
     width: 255px;
 }
+.slider {
+    position: relative;
+    max-width: 1300px;
+    margin: auto;
+  
+  }
+  
+  .slides {
+    display: flex;
+    overflow-x: hidden;
+  
+  }
+  
+  .slides img {
+    padding-left: 25px;
+    width: 400px;
+    border-radius: 25px;
+    height: 340px;
+    transition: transform 0.5s ease;
+  }
+  
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
