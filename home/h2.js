@@ -21,7 +21,5 @@ function prevSlide() {
     showSlides();
 }
 
-
-
 setInterval(nextSlide, 2000);
 showSlides();
