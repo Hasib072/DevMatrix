@@ -16,6 +16,11 @@ function nextSlide() {
     slideIndex++;
     showSlides();
 }
+function prevSlide() {
+    slideIndex--;
+    showSlides();
+}
+
 
 
 setInterval(nextSlide, 2000);
