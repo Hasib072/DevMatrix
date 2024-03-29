@@ -6,6 +6,7 @@ import Signup from './Signup'
 import Login from './Login'
 import Home from './Home'
 import CreateElement from './CreateElement'
+import MyProfile from './MyProfile'
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path='/login' element={<Login/>}/>
         <Route path='/home' element={<Home />}/>
         <Route path='/create' element={<CreateElement />}/>
+        <Route path='/myprofile' element={<MyProfile/>}/>
       </Routes>
     </BrowserRouter>
   )

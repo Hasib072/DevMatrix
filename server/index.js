@@ -61,6 +61,31 @@ app.get("/elements", (req, res) => {
       .catch(err => res.json(err));
   });
 
+  app.get("/users/:username", (req, res) => {
+    const { username } = req.params;
+
+    UserModel.findOne({ user_name: username })
+      .then(user => {
+        if (!user) {
+          return res.status(404).json({ error: "User not found" });
+        }
+        res.json(user);
+      })
+      .catch(err => res.status(500).json(err));
+});
+
+app.put('/updateuserbio/:username', async (req, res) => {
+  const { username } = req.params;
+  const { bio } = req.body;
+
+  try {
+      const updatedUser = await UserModel.findOneAndUpdate({ user_name: username }, { bio: bio }, { new: true });
+      if (!updatedUser) return res.status(404).send('User not found');
+      res.json(updatedUser);
+  } catch (error) {
+      res.status(500).send(error.toString());
+  }
+});
 
 app.get("/elements/by-user", (req, res) => {
     // Extract user_name from the request query parameters

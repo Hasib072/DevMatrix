@@ -41,7 +41,7 @@ function Signup() {
           <button className="signup_but" type="submit">Sign up</button>
           <br/>
           <img className="line1_signup" src="https://i.ibb.co/BqcnZt5/minus.png" alt=""/>
-          <img className="line2_signup" src="https://i.ibb.co/BqcnZt5/minus.png" alt=""/>
+          <img className="line2_signup" src="https://i.ibb.co/BqcnZt5/minus.png" alt=""/>x
           <p className="line_text_signup">Signup With</p><br/>
           <a href=""><img className="google_logo" src="https://i.ibb.co/NLpbPGm/social.png" alt=""/></a>
           <a href=""><img className="github_logo" src="https://i.ibb.co/K5Xx5sZ/github.png" alt=""/></a>
