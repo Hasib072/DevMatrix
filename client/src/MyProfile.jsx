@@ -1,15 +1,18 @@
 import React, { useState, useEffect, useRef } from "react";
 import './MyProfile.css';
+import { useLocation } from 'react-router-dom';
 import NavigationBar from "./NavigationBar";
 
 
 function MyProfile(){
+    const location = useLocation();
+    const { username } = location.state || {}; // Default to an empty object if state is undefined
 
     const [profileData, setProfileData] = useState({
         fname: '',
         lname: '',
         email: '' ,
-        username: '',
+        username: username,
         description: ''
     });
     const [isLoading, setIsLoading] = useState(true);
@@ -20,7 +23,7 @@ function MyProfile(){
             setIsLoading(true);
             try {
                 // Fetch data from your API endpoint
-                const response = await fetch('http://localhost:3001/users/JM25GG');
+                const response = await fetch(`http://localhost:3001/users/${username}`);
                 if (!response.ok) {
                     throw new Error('Could not fetch profile data!');
                 }

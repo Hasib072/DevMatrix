@@ -16,7 +16,10 @@ app.post("/login", (req, res) => {
     .then(user => {
         if(user) {
             if(user.password === password){
-                res.json("Success")
+                res.json({
+                  message: "Successfully loggedin",
+                  username: user.user_name
+                })
             }else{
                 res.json("The password is incorrect")
             }
@@ -25,7 +28,10 @@ app.post("/login", (req, res) => {
             .then(user => {
                 if(user) {
                     if(user.password === password){
-                        res.json("Successfully loggedin " + email)
+                      res.json({
+                        message: "Successfully loggedin",
+                        username: user.user_name
+                      })
                     }else{
                         res.json("The password is incorrect")
                     }
