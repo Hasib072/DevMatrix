@@ -2,16 +2,32 @@
 .grid-container {
     margin-left: 5%;
     margin-right: 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 16px;
     padding: 16px;
     background-color: #212121;
+    justify-items: center; /* Centers grid items horizontally */
   }
   
+  @media (max-width: 1200px) { /* Adjust the max-width as needed */
+    .grid-container {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns for smaller widths */
+    }
+  }
+  
+  @media (max-width: 900px) { /* Adjust the max-width as needed */
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for even smaller widths */
+    }
+  }
+  
+  @media (max-width: 600px) { /* Adjust the max-width as needed */
+    .grid-container {
+      grid-template-columns: 1fr; /* 1 column for mobile */
+    }
+  }
+
   .snippet-container {
     background-color: #2b2b2b;
     border-radius: 8px;
@@ -21,6 +37,7 @@
     flex-direction: column;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    height: 300px; /* Set a fixed height or use relative units */
+    height: 300px; /* Set a fixed height */
+    width: 100%; /* Ensures the container takes up all available column width */
   }
   

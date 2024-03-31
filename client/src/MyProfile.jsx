@@ -393,6 +393,11 @@ const snippets = [
               
               ` 
         },
+        {
+                title: 'Tile here',
+                htmlCode: ``,
+                cssCode: `` 
+              },
         
     //   {
     //     title: 'Tile here',
