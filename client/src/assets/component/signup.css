@@ -1,205 +1,250 @@
 .signup_body{           
-    font-family: "Rajdhani", sans-serif;
-    font-weight: 300;
-    text-align: center;
-    background-color: #212121;
-    margin: 0px;
-    font-size: 22px;
-    zoom: 80%;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
-    bottom: 60px;
-  }
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  background-color: #212121;
+  margin: 0px;
+  font-size: 22px;
+  zoom: 80%;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  bottom: 60px;
+}
 
-  .signup_form{
-  background-color:#212121;
-  max-width: 499px;
-  max-height: 629px;
-  padding-top: 85px;
-  border-radius: 23px;
-  box-shadow: 5px 3px 10px 0.3px	#1065669b;
-  border-style: solid;
-  border-width: 0.3px;
-  border-color: 	#106466;
-  margin: 0 auto;
-  z-index: -1;
-  }
-  
-  .signup_head{
-  color: white;
-  position: relative;
-  top: 60px;
-  right: 120px;
-  font-weight: 900; 
-  z-index: 1;
-  font-family: "Inter", sans-serif;
-  font-size: 50px;
-  }
-  
-  .signup_but{
-  background-color: #02B794;
-  color: black;
-  padding-top: 7px;
-  padding-bottom:55px;
-  width: 266px;
-  height: 65.22px;
-  position: relative;
-  top: 20px;
-  border-radius: 15px;
-  font-size: 32px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
-  cursor: pointer;
+.signup_form{
+background-color:#212121;
+max-width: 499px;
+max-height: 675px;
+padding-top: 85px;
+border-radius: 23px;
+box-shadow: 5px 3px 10px 0.3px	#1065669b;
+border-style: solid;
+border-width: 0.3px;
+border-color: 	#106466;
+margin: 0 auto;
+z-index: -1;
+}
+
+.signup_head{
+color: white;
+position: relative;
+top: 60px;
+right: 120px;
+font-weight: 900; 
+z-index: 1;
+font-family: "Inter", sans-serif;
+font-size: 50px;
+}
+
+.signup_but{
+background-color: #02B794;
+color: black;
+padding-top: 14px;
+padding-bottom:50px;
+width: 266px;
+height: 65.22px;
+position: relative;
+top: 1px;
+font-weight:500px ;
+border-radius: 15px;
+font-size: 32px;
+font-family: "Inter", sans-serif;
+font-weight: 700;
+cursor: pointer;
+border: none;
+}
+
+.signup_but:hover{
+transition: 0.3s;
+background-color: #73d0bf
+}
+
+.fooker{
+position: relative;
+top: 160px;
+right: 120px;
+z-index:0;
+width: 218px;
+height: 60px;
+}
+
+.user_label{ 
+color: rgba(255, 255, 255, 0.436);
+position: relative;
+right: 199px;
+bottom:   17px;
+font-size: 22px;
+}
+
+.pass_label{ 
+color: rgba(255, 255, 255, 0.436);
+position: relative;
+right: 147px;
+bottom: 9px;
+font-size: 22px;
+}
+
+.cpass_label{
+  color: rgba(255, 255, 255, 0.436);
+position: relative;
+right: 105px;
+bottom: 11.7px;
+font-size: 22px;
+}
+
+.cpass_input{
   border: none;
-  }
-  
-  .signup_but:hover{
-  transition: 0.3s;
-  background-color: #73d0bf
-  }
-  
-  .fooker{
-  position: relative;
-  top: 160px;
-  right: 120px;
-  z-index:0;
-  width: 205px;
-  height: 60px;
-  }
-  
-  .user_label{ 
+background-color: rgba(79, 78, 78, 0.436) ;
+width: 386px;
+height: 50px;
+border-radius: 15px;
+position: relative;
+bottom: 30px;  
+color: white;
+font-size: 20px;
+padding-left: 15px;
+}
+
+.user_input{
+border: none;
+background-color: rgba(79, 78, 78, 0.436) ;
+width: 386px;
+height: 50px;
+border-radius: 15px;
+position: relative;
+bottom: 22px;  
+color: white;
+font-size: 20px;
+padding-left: 15px;  
+}
+
+.pass_input{
+border: none;
+background-color: rgba(79, 78, 78, 0.436) ;
+width: 386px;
+height: 50px;
+border-radius: 15px;
+position: relative;
+bottom: 2px;  
+color: white;
+font-size: 20px;
+padding-left: 15px;  
+}
+
+.FP{
+position: relative;
+left: 113px;
+color: #ffffff79;
+font-size: 22px;
+text-decoration: none;
+}
+
+.FP:hover{
+text-decoration:underline;
+color: #ffffff9d;
+}
+
+.line1{
+filter: invert();
+height: 8px;
+width: 120px;
+position: relative;
+top: 25px;
+right: 90px;
+}
+
+.line2{
+filter: invert();
+height: 8px;
+width: 120px;
+position: relative;
+top: 25px;
+left: 90px;
+}
+
+.line_text{
+color:rgba(255, 255, 255, 0.436);
+font-family: "Open Sans", sans-serif;
+font-size: 25px;
+position: relative;
+bottom: 26px;;
+}
+
+.google_logo{
+filter: invert();
+width: 65px;
+height: 65px;
+top:-50px;
+position:relative;
+right: 30px;
+}
+
+.github_logo{
+filter: invert();
+width: 65px;
+height: 65px;
+position:relative;
+top:-50px;
+left: 30px;
+}
+
+.last_line{
+color: rgba(255, 255, 255, 0.553);
+position: relative;
+bottom: 50px;
+}
+
+.signup{
+color: rgba(255, 255, 255, 0.553);
+text-decoration: none;
+}
+
+.signup:hover{
+text-decoration: underline;
+color:  rgba(255, 255, 255, 0.641);
+}
+
+.first_name{
   color: rgba(255, 255, 255, 0.436);
   position: relative;
-  right: 142px;
+  right: 140px;
   bottom: 25px;
   font-size: 22px;
-  }
-  
-  .email_label{ 
+}
+
+.last_name{
   color: rgba(255, 255, 255, 0.436);
   position: relative;
-  right: 160px;
-  bottom: 1px;
+  right: 35px;
+  bottom:   64.5px;
   font-size: 22px;
-  }
-  
-  .pass_label{
-    color: rgba(255, 255, 255, 0.436);
-  position: relative;
-  right: 144px;
-  bottom: 1px;
-  font-size: 22px;
-  }
+}
 
-  .pass_input{
-    border: none;
-  background-color: rgba(79, 78, 78, 0.436) ;
-  width: 386px;
-  height: 61px;
-  border-radius: 15px;
-  position: relative;
-  bottom: 20px;  
-  color: white;
-  font-size: 20px;
-  padding-left: 15px;
-  }
-
-  .user_input{
+.first_input{
   border: none;
-  background-color: rgba(79, 78, 78, 0.436) ;
-  width: 386px;
-  height: 61px;
-  border-radius: 15px;
-  position: relative;
-  bottom: 20px;  
-  color: white;
-  font-size: 20px;
-  padding-left: 15px;  
-  }
+background-color: rgba(79, 78, 78, 0.436) ;
+width: 180px;
+height: 50px;
+border-radius: 15px;
+position: relative;
+bottom: 18px; 
+left: 160px; 
+color: white;
+font-size: 20px;
+padding-left: 15px; 
+}
 
-  .email_input{
+.last_input{
   border: none;
-  background-color: rgba(79, 78, 78, 0.436) ;
-  width: 386px;
-  height: 61px;
-  border-radius: 15px;
-  position: relative;
-  top: 5px;  
-  color: white;
-  font-size: 20px;
-  padding-left: 15px;  
-  }
-
-  .FP{
-  position: relative;
-  left: 113px;
-  color: #ffffff79;
-  font-size: 22px;
-  text-decoration: none;
-  }
-
-  .FP:hover{
-  text-decoration:underline;
-  color: #ffffff9d;
-  }
-
-  .line1{
-  filter: invert();
-  height: 8px;
-  width: 120px;
-  position: relative;
-  top: 33px;
-  right: 90px;
-  }
-
-  .line2{
-  filter: invert();
-  height: 8px;
-  width: 120px;
-  position: relative;
-  top: 33px;
-  left: 90px;
-  }
-  
-  .line_text{
-  color:rgba(255, 255, 255, 0.436);
-  font-family: "Open Sans", sans-serif;
-  font-size: 25px;
-  position: relative;
-  bottom: 18px;;
-  }
-
-  .google_logo{
-  filter: invert();
-  width: 65px;
-  height: 65px;
-  top:-30px;
-  position:relative;
-  right: 30px;
-  }
-
-  .github_logo{
-  filter: invert();
-  width: 65px;
-  height: 65px;
-  position:relative;
-  top:-30px;
-  left: 30px;
-  }
-
-  .last_line{
-  color: rgba(255, 255, 255, 0.553);
-  position: relative;
-  bottom: 25px;
-  }
-
-  .signup{
-  color: rgba(255, 255, 255, 0.553);
-  text-decoration: none;
-  }
-  
-  .signup:hover{
-  text-decoration: underline;
-  color:  rgba(255, 255, 255, 0.641);
-  }
+background-color: rgba(79, 78, 78, 0.436) ;
+width: 180px;
+height: 50px;
+border-radius: 15px;
+position: relative;
+bottom: 69.8px;  
+right: 1.5px;
+color: white;
+font-size: 20px;
+padding-left: 15px; 
+}

@@ -49,6 +49,10 @@
     type: String,
     
   },
+  linkedin_account: {
+    type: String,
+    
+  },
   website: {
     type: String,
 }

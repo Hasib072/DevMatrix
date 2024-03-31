@@ -8,7 +8,10 @@ function Signup() {
     const [first_name, setFName] = useState('')
     const [last_name, setLName] = useState('')
     const [dob, setDob] = useState('')
-    const [bio, setBio] = useState('')
+    const [bio, setBio] = useState('Add you Bio Here.')
+    const [website, setWebsite] = useState('https://www.google.com')
+    const [linkedin_account, setLinkedin] = useState('https://www.google.com')
+    const [git_account, setGithub] = useState('https://www.google.com')
     const [user_name, setName] = useState()
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
@@ -16,7 +19,7 @@ function Signup() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post("http://localhost:3001/register", {first_name, last_name, user_name, email, password, dob, bio})
+        axios.post("http://localhost:3001/register", {first_name, last_name, user_name, email, password, dob, bio, website, linkedin_account, git_account})
         .then(result => {console.log(result)
         navigate("/login")
         })
@@ -29,8 +32,13 @@ function Signup() {
         <h1 className="signup_head">Sign up</h1>
         <div className="Form_body p-3 rounded w-25">
         <form className="signup_form" onSubmit={handleSubmit}>
+          <label className="first_name" htmlFor="name">First Name</label><br/>
+          <input className="first_input_signup" type="text" id="fname" autoComplete='off' onChange={(e) => setFName(e.target.value)} required />
+
+          <label className="last_name" htmlFor="name">Last Name</label><br/>
+          <input className="last_input_signup" type="text" id="lname" autoComplete='off'onChange={(e) => setLName(e.target.value)} required/>
           <label className="user_label_signup"  htmlFor="name">Username</label><br/>
-          <input className="user_input" type="text" id="name" autoComplete='off' onChange={(e) => setName(e.target.value)} required/>
+          <input className="user_input_signup" type="text" id="name" autoComplete='off' onChange={(e) => setName(e.target.value)} required/>
           <br/>
           <label className="email_label_signup" htmlFor="email">E-mail</label><br/>  
           <input className="email_input" type="text" id="email" autoComplete='off' onChange={(e) => setEmail(e.target.value)} required/>

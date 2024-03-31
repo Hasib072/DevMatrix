@@ -41,7 +41,7 @@ function Login() {
                 <br/><br/>
                 <a className="FP" href="">Forgot Password?</a>
                 <br/>
-                <a href=""><button onClick="" className="login_but">Sign in</button></a>
+                <a href=""><button onClick="" className="login_but">Log in</button></a>
                 <br/>
                 <img className="line1_login" src="https://i.ibb.co/BqcnZt5/minus.png" alt=""/>
                 <img className="line2_login" src="https://i.ibb.co/BqcnZt5/minus.png" alt=""/>
