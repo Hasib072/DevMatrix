@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from 'axios'
 import { useNavigate } from "react-router-dom";
+import "./CreateElement.css"
 
 
 function CreateElement() {    
@@ -11,7 +12,7 @@ function CreateElement() {
     const [element_css, setElementCss] = useState('')
     const [element_desc, setElementDesc] = useState('')
     const [element_tags, setElementTags] = useState('')
-    const [is_puplic, setElementPublic] = useState('')
+    const [is_puplic, setElementPublic] = useState()
 
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
@@ -19,7 +20,8 @@ function CreateElement() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post("http://localhost:3001/create", {user_name, element_name, element_html, element_css, element_tags})
+        console.log(is_puplic)
+        axios.post("http://localhost:3001/create", {user_name, element_name, element_html, element_css, element_tags, is_puplic, element_desc})
         .then(result => {console.log(result)
         // navigate("/login")
         })
@@ -32,17 +34,27 @@ function CreateElement() {
         
         <div className="Form_body p-3 rounded w-25">
         <form className="signup_form" onSubmit={handleSubmit}>
-          <label className="user_label_signup"  htmlFor="name">Username</label><br/>
-          <input className="user_input" type="text" id="name" autoComplete='off' onChange={(e) => setName(e.target.value)} required/>
           <br/>
-          <label className="email_label_signup" htmlFor="email">Title</label><br/>  
-          <input className="email_input" type="text" id="email" autoComplete='off' onChange={(e) => setElementName(e.target.value)} required/>
+          <input className="user_input" type="text" id="name" placeholder="Username" autoComplete='off' onChange={(e) => setName(e.target.value)} required/>
+          <br/>
+          <br/>
+          <input className="email_input" type="text" id="email" placeholder="Title" autoComplete='off' onChange={(e) => setElementName(e.target.value)} required/>
           <br/><br/>
   
-          <label className="email_label_signup" htmlFor="email">HTML</label><br/>  
-          <input className="email_input" type="text" id="email" autoComplete='off' onChange={(e) => setElementHtml(e.target.value)}/>
           
-          <br/>
+          <input className="email_input" type="text" id="email" placeholder="HTML CODE" autoComplete='off' onChange={(e) => setElementHtml(e.target.value)}/>
+          <br/><br/>
+          <input className="email_input" type="text" id="email" placeholder="CSS CODE" autoComplete='off' onChange={(e) => setElementCss(e.target.value)}/>
+          <br/><br/>
+          <div class="switch-holder">
+    <div class="switch-label">
+        <span>Public</span>
+    </div>
+    <div class="switch-toggle">
+        <input type="checkbox" id="bluetooth" onChange={(e) => setElementPublic(e.target.checked)}/>
+        <label for="bluetooth"></label>
+    </div>
+</div>
           <br/><br/>
           <br/>
           <button className="signup_but" type="submit">Upload</button>

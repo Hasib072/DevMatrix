@@ -1,7 +1,7 @@
 import React from 'react';
 import './SnippetGrid.css';
 
-const CodeSnippet = ({ htmlCode, cssCode }) => {
+const CodeSnippet = ({ element_html, element_css }) => {
   // Create a complete HTML document with centered body content
   const fullHtml = `
     <!DOCTYPE html>
@@ -20,11 +20,11 @@ const CodeSnippet = ({ htmlCode, cssCode }) => {
           justify-content: center;
           align-items: center;
         }
-        ${cssCode}
+        ${element_css}
       </style>
     </head>
     <body>
-      ${htmlCode}
+      ${element_html}
     </body>
     </html>
   `;
@@ -32,7 +32,7 @@ const CodeSnippet = ({ htmlCode, cssCode }) => {
   return (
     <div className="snippet-container">
       <iframe 
-        title="Preview"
+        element_name="Preview"
         srcDoc={fullHtml}
         style={{ width: '100%', height: '100%', border: 'none' }}
         sandbox="allow-scripts" // Sandbox for security reasons

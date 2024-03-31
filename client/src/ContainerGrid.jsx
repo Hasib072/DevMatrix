@@ -9,9 +9,9 @@ const ContainerGrid = ({ snippets }) => {
       {snippets.map((snippet, index) => (
         <CodeSnippet
           key={index}
-          title={snippet.title}
-          htmlCode={snippet.htmlCode}
-          cssCode={snippet.cssCode}
+          element_name={snippet.element_name}
+          element_html={snippet.element_html}
+          element_css={snippet.element_css}
         />
       ))}
     </div>
