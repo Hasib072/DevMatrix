@@ -5,9 +5,12 @@
 
 body{
     background-color: #212121;
-    overflow: hidden;
+    overflow: auto;
     
   }
+body::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
 
 .login_body{               
     font-family: "Rajdhani", sans-serif;

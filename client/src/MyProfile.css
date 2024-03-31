@@ -260,7 +260,7 @@
     border: 4px solid #02B794;
     padding: 5px 28px;
   }
-  .lastdiv{
+.lastdiv{
     position: relative;
     background-color:#02B794;
     width:100%;
@@ -295,11 +295,7 @@
     margin-left: 500px;
     margin-top: 40px;
 }
-.three{
-    display: flex;
-    margin-top: 100px;
-    margin-left: 100px;
-}
+
 .last{
     height: 300px;
     margin-right: 5%;

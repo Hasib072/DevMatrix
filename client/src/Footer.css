@@ -1,0 +1,60 @@
+.lastdiv{
+    background-color:#02B794;
+    width:100%;
+    margin-top: 30px;
+
+}
+
+.footer{
+   color: rgb(229, 237, 229);
+   
+   
+     display: flex;
+}
+.logo{
+    
+    height:100px;
+    width: 100px;
+    margin-top: 40px;
+    margin-left: 30px;
+    
+}
+.icons{
+
+    margin-left: 30px;
+
+}
+
+.footer>div>h3{
+
+    font-size: small;
+    color: black;
+    margin-left: 30px;
+
+}
+.three>div>ul>li{
+
+
+    font-size:x-small;
+}
+.line{
+    height:300px;
+    width:4px;
+    background-color:#212121;
+    margin-left: 500px;
+    margin-top: 40px;
+    position: relative;
+    right: 200px;
+}
+.three{
+    display: flex;
+    position: relative;
+    margin-top: 100px;
+    right: 200px;
+}
+.last{
+    margin-bottom: 1px;
+    height: 300px;
+    margin-right: 5%;
+    width: 100%;
+}
