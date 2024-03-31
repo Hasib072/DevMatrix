@@ -18,7 +18,7 @@ function NavigationBar({user}){
                     <div id="dp"></div>
                     <div>
                         <p id="nav-name">{user.fname} {user.lname}</p>
-                        <p id="un">{user.username}</p>    
+                        <p id="un">{"@" + user.username}</p>    
                     </div>
                 </div>
                 </div>

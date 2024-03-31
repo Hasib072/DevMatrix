@@ -13,7 +13,10 @@ function MyProfile(){
         lname: '',
         email: '' ,
         username: username,
-        description: ''
+        description: '',
+        personalwebsite: '',
+        git_account: '',
+        linkedin_account: ''
     });
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -32,7 +35,10 @@ function MyProfile(){
                     fname: data.first_name,
                     lname: data.last_name,
                     username: data.user_name,
-                    description: data.bio
+                    description: data.bio,
+                    personalwebsite: data.website,
+                    git_account: data.git_account,
+                    linkedin_account: data.linkedin_account
                 });
             } catch (error) {
                 setError(error.message);
@@ -108,7 +114,7 @@ function MyProfile(){
                     <div id="profile_pic">
                     </div>
                     <h1 id="creaters_name">{profileData.fname} {profileData.lname}</h1>
-                    <p id="username">{profileData.username}</p>
+                    <p id="username">{"@" +  profileData.username}</p>
                 </div>
                 <div>
                     <p id="about">About me!</p>
@@ -129,9 +135,15 @@ function MyProfile(){
                 <div id="line"></div>
                 <div>
                     <p id="social">Socials</p>
-                    <button id="website_button">Website</button>
-                    <button id="github_button">Github</button>
-                    <button id="linkedin_button">Linkedin</button>
+                    <a href={profileData.personalwebsite} target="_blank"><button id="website_button">Website</button></a>
+                    <a href={profileData.git_account} target="_blank"><button id="github_button">Github</button></a>
+                    <a href={profileData.linkedin_account} target="_blank"><button id="linkedin_button">Linkedin</button></a>
+                </div>
+                <div id="sec">
+                    <button id="public">Public</button>
+                    <button id="variation">Variation</button>
+                    <button id="drafts">Drafts</button>
+                    <button id="fav">Favorites</button>
                 </div>
         </div>
 
