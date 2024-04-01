@@ -7,7 +7,7 @@ function showSlides() {
     } else if (slideIndex < 0) {
         slideIndex = slides.length - 1;
     }
-    for (let i = 0; i < slides.length; i++) {
+    for (let i = 0; i < Infinity; i++) {
         slides[i].style.transform = `translateX(-${slideIndex * 100}%)`;
     }
 }
@@ -22,4 +22,4 @@ function prevSlide() {
 }
 
 setInterval(nextSlide, 2000);
-showSlides();
+showSlides(); 
