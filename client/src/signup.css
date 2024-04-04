@@ -1,6 +1,7 @@
 body{
   background-color: #212121;
   overflow: auto;
+  overflow-x: hidden;
   
 }
 

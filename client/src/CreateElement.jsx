@@ -12,7 +12,7 @@ function CreateElement() {
     const [element_css, setElementCss] = useState('')
     const [element_desc, setElementDesc] = useState('')
     const [element_tags, setElementTags] = useState('')
-    const [is_puplic, setElementPublic] = useState()
+    const [is_puplic, setIsPublic] = useState(false)
 
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
@@ -23,7 +23,7 @@ function CreateElement() {
         console.log(is_puplic)
         axios.post("http://localhost:3001/create", {user_name, element_name, element_html, element_css, element_tags, is_puplic, element_desc})
         .then(result => {console.log(result)
-        // navigate("/login")
+        navigate("/myprofile", { state: { username: user_name } })
         })
         .catch(err => console.log(err))
     }
@@ -51,7 +51,7 @@ function CreateElement() {
         <span>Public</span>
     </div>
     <div class="switch-toggle">
-        <input type="checkbox" id="bluetooth" onChange={(e) => setElementPublic(e.target.checked)}/>
+        <input type="checkbox" id="bluetooth" onChange={(e) => setIsPublic(e.target.checked)}/>
         <label for="bluetooth"></label>
     </div>
 </div>
