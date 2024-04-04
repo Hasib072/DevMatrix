@@ -137,7 +137,9 @@ function MyProfile(){
     return(
         <div>
             <NavigationBar user={profileData} />
+            <div className="all_info">
 
+            
             <div id="info">
                 <div>
                     <div id="profile_pic">
@@ -174,7 +176,9 @@ function MyProfile(){
                     <button id="drafts">Drafts</button>
                     <button id="fav">Favorites</button>
                 </div>
-                {hasElement ? (<ContainerGrid snippets={userElements}/>) : (
+            </div>
+        </div>
+        {hasElement ? (<ContainerGrid snippets={userElements}/>) : (
                     <div>
                         <div class="loader">
                         <div class="box1"></div>
@@ -186,9 +190,6 @@ function MyProfile(){
                 ) }
                 
                 {/* {hasElement ? (<button id="more">Show more</button>): null} */}
-                
-
-        </div>
                         <Footer/>
         </div>
     )

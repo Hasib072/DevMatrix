@@ -7,6 +7,7 @@ import Login from './Login'
 import Home from './Home'
 import CreateElement from './CreateElement'
 import MyProfile from './MyProfile'
+import Explore from './Explore'
 
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
         <Route path='/home' element={<Home />}/>
         <Route path='/create' element={<CreateElement />}/>
         <Route path='/myprofile' element={<MyProfile/>}/>
+        <Route path="/explore" element={<Explore/>}/>
+        <Route path="/" element={<Explore/>}/>
       </Routes>
     </BrowserRouter>
   )

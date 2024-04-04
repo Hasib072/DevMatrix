@@ -232,8 +232,8 @@
 }
 .grid-container {
     z-index: 5;
-    position: absolute;
-    top: 520px;
+    /* position: absolute; */
+    /* top: 520px; */
     left: 70px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -547,3 +547,8 @@
     }
   }
   
+
+  .all_info{
+    /* background-color: blue; */
+    height: 435px;
+  }
