@@ -1,7 +1,7 @@
 import React from 'react';
 import './SnippetGrid.css';
 
-const CodeSnippet = ({ element_html, element_css, element_background, element_background2 }) => {
+const CodeSnippet = ({ element_name, element_html, element_css, element_background, element_background2 }) => {
 
   if (!element_background){
     element_background = "#2b2b2b";
@@ -33,7 +33,13 @@ const CodeSnippet = ({ element_html, element_css, element_background, element_ba
         .Light_Dark_Container{
           display: none;
         }
-        
+        .E_title{
+          position: absolute;
+          top: 3px;
+          left: 15px;
+          color:gray;
+          z-index: 2;
+        }
         body:hover .Light_Dark_Container{
           display: block; /* Show the Light_Dark_Container on hover */
         }
@@ -71,12 +77,13 @@ const CodeSnippet = ({ element_html, element_css, element_background, element_ba
         
         .icon--moon {
           transition-delay: 200ms;
+          color: #ffffff;
         }
         
         .icon--sun {
           transform: scale(0);
-          color: #2b2b2b;
-          shadow: 1px solid black;
+          color: #000000;
+          
         }
         
         #switch:checked + .icon--moon {
@@ -113,8 +120,9 @@ const CodeSnippet = ({ element_html, element_css, element_background, element_ba
                 </svg>
             </div>
         </label>
+        <!-- <p class="E_title" >${element_name}</p> -->
     </div>
-      ${element_html}
+       ${element_html} 
       <script>
       document.addEventListener('DOMContentLoaded', (event) => {
         const switchElement = document.getElementById('switch');
