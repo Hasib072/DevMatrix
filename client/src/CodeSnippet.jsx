@@ -1,9 +1,14 @@
 import React from 'react';
 import './SnippetGrid.css';
 
-const CodeSnippet = ({ element_html, element_css }) => {
+const CodeSnippet = ({ element_html, element_css, element_background, element_background2 }) => {
 
-  
+  if (!element_background){
+    element_background = "#2b2b2b";
+  }
+  if (!element_background2){
+    element_background2 = "#d9d9d9";
+  }
 
   // Create a complete HTML document with centered body content
   const fullHtml = `
@@ -14,7 +19,7 @@ const CodeSnippet = ({ element_html, element_css }) => {
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <style>
         body, html {
-          background-color: #2b2b2b;
+          background-color: ${element_background};
           margin: 0;
           padding: 0;
           height: 100%;
@@ -71,6 +76,7 @@ const CodeSnippet = ({ element_html, element_css }) => {
         .icon--sun {
           transform: scale(0);
           color: #2b2b2b;
+          shadow: 1px solid black;
         }
         
         #switch:checked + .icon--moon {
@@ -85,7 +91,7 @@ const CodeSnippet = ({ element_html, element_css }) => {
 
         
         body.dark-mode {
-          background-color: #d9d9d9;
+          background-color: ${element_background2};
         }
         ${element_css}
       </style>

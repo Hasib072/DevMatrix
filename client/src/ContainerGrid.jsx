@@ -12,6 +12,9 @@ const ContainerGrid = ({ snippets }) => {
           element_name={snippet.element_name}
           element_html={snippet.element_html}
           element_css={snippet.element_css}
+          element_background={snippet.background}
+          element_background2={snippet.background2}
+
         />
       ))}
     </div>

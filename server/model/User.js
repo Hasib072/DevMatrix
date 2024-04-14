@@ -37,6 +37,10 @@
       message: props => `${props.value} is not a valid email address!`
     },
   },
+  profile_picture: {
+    type: String,
+    trim: true
+  },
   dob: {
       type: Date,
       

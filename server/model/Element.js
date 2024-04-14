@@ -42,6 +42,14 @@
     type: Number,
     default: 0
   },
+  background: {
+    type: String,
+    default: "#2b2b2b"
+  },
+  background2: {
+    type: String,
+    default: "#2b2b2b"
+  }
  })
 
  const ElementModel = mongoose.model("Element", ElementSchema)

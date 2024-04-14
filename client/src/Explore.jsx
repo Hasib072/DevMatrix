@@ -110,6 +110,7 @@ function Explore(){
                     </div>
                 ) }
             </div>
+            <Footer/>
         </div>
     )
 }
