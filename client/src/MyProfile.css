@@ -313,11 +313,18 @@
 
 .loader {
     width: 112px;
-    height: 112px;
+    height: 600px;
     position: relative;
-    top: 300px;
+    top: 250px;
     left: 710px;
   }
+
+.Loading_Text{
+  position: relative;
+    top: 120px;
+    color: #02b794;
+    font-size: 20px;
+}
   
   .box1,
   .box2,

@@ -28,13 +28,13 @@ function NavigationBar({user}){
                   <>
                     <Link to="/explore" state={{ username: user.username }}>Trending</Link>
                     <Link to="/explore" state={{ username: user.username }}>Discover</Link>
-                    <Link to="/explore" state={{ username: user.username }}>About</Link>
+                    <Link to="/home" state={{ username: user.username }}>About</Link>
                   </>
                 ) : (
                   <>
                     <Link to="/explore">Trending</Link>
                     <Link to="/explore">Discover</Link>
-                    <Link to="/explore">About</Link>
+                    <Link to="/home">About</Link>
                   </>
                 )}
                 </div>
