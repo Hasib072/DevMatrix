@@ -1,0 +1,30 @@
+.about-us {
+    
+    padding: 50px 20px; /* Padding for spacing */
+    text-align: center; /* Centering the text */
+  }
+  
+  .about-us .container {
+    max-width: 800px; /* Max width for content */
+    margin: auto; /* Centering the container */
+    
+  }
+  
+  .about-us h2 {
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+  }
+  
+  .about-us p {
+    color: #666; /* Medium grey color for text */
+    line-height: 1.6; /* Line height for paragraph spacing */
+    margin-bottom: 20px; /* Space below each paragraph */
+  }
+  
+  .about-us img {
+    max-width: 100%; /* Ensuring the image is responsive */
+    height: auto; /* Maintaining aspect ratio */
+    margin-bottom: 20px; /* Space below the image */
+  }
+  

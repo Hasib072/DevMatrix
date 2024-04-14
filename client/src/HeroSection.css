@@ -1,0 +1,110 @@
+.hero{ 
+    height:600px;
+    width:100%;
+    /* background-image: url('images\\Hero Containers (1).png'); */
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center center;
+    background-color: #212121;
+    position:relative;
+    margin-top: -2px;
+    /* z-index: -1;
+    pointer-events: none; */
+    
+}
+.himg{
+    height: 100%;
+    margin-left: 250px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.htext{
+    margin-left: -170px;
+}
+
+.text1{
+      color:white;
+      text-align: left;
+      /* padding-top: 30%; */
+      padding-left: 0%;
+      margin-left: -220px;
+      /* margin-top: -1100px; */
+      font-size:82px;
+      line-height: 90px;
+      position: absolute;
+      top: 85px;
+
+}
+.text2{
+
+    color:rgb(183, 176, 176);
+    text-align: left;
+    margin-left: -215px;
+    font-size: 16px;
+    position: absolute;
+    top: 280px;
+
+
+}
+
+
+
+.twobtn1 {
+    width: fit-content;
+    min-width: 180px;
+    height: 45px;
+    padding: 8px;
+    border-radius: 25px;
+    border: 2.5px solid #E0E1E4;
+    box-shadow: 0px 0px 20px -20px;
+    cursor: pointer;
+    background-color: white;
+    transition: all 0.2s ease-in-out 0ms;
+    user-select: none;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .twobtn1:hover {
+    background-color: #F2F2F2;
+    box-shadow: 0px 0px 20px -18px;
+  }
+  
+  .twobtn1:active {
+    transform: scale(0.95);
+  }
+.twobtn2{
+    /* background-color: #ffffff00; */
+    text-decoration: none;
+    color: #E0E1E4;
+    margin-left: 32px;
+}
+.btngrp{
+
+    
+    position: absolute;
+    top: 350px;
+    left: -825px;
+
+}
+.green{
+
+    
+    background: linear-gradient(62deg, rgba(2,183,148,1) 22%, rgba(2,92,74,1) 100%);
+    background: -webkit-linear-gradient(62deg, rgba(2,183,148,1) 22%, rgba(2,92,74,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.WhiteLine{
+    color: white;
+    z-index: 10;
+    position: relative;
+    top: 164px;
+    height: 20px;
+    width: 2000px;
+}
+
+  

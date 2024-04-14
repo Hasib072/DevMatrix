@@ -68,10 +68,3 @@
     opacity: 20%;
     margin-top: 25px;
 }
-
-#head{
-    overflow: hidden;
-    background-image: linear-gradient(to bottom, #323232, #2e2e2e, #292929, #252525, #212121);            
-    padding: 25px;
-    box-shadow: 0px 0.14px white;
-}

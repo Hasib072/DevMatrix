@@ -21,7 +21,7 @@ function App() {
         <Route path='/create' element={<CreateElement />}/>
         <Route path='/myprofile' element={<MyProfile/>}/>
         <Route path="/explore" element={<Explore/>}/>
-        <Route path="/" element={<Explore/>}/>
+        <Route path="/" element={<Home/>}/>
       </Routes>
     </BrowserRouter>
   )

@@ -1,0 +1,52 @@
+DEVMATRIX_MERN
+ ┣ client
+ ┃  ┣ public
+ ┃  ┃  ┗ vite.svg
+ ┃  ┣ src
+ ┃  ┃  ┣ assets
+ ┃  ┃  ┃  ┣ component
+ ┃  ┃  ┃  ┃  ┣ DevMatrix_logo_Nav.png
+ ┃  ┃  ┃  ┃  ┣ icons2.png
+ ┃  ┃  ┃  ┃  ┣ last.png
+ ┃  ┃  ┃  ┃  ┣ login.css
+ ┃  ┃  ┃  ┃  ┣ login.html
+ ┃  ┃  ┃  ┃  ┣ logo.png
+ ┃  ┃  ┃  ┃  ┣ signup.css
+ ┃  ┃  ┃  ┃  ┗ signup.html
+ ┃  ┃  ┃  ┗ react.svg
+ ┃  ┃  ┣ App.jsx
+ ┃  ┃  ┣ CodeSnippet.jsx
+ ┃  ┃  ┣ ContainerGrid.jsx
+ ┃  ┃  ┣ CreateElement.css
+ ┃  ┃  ┣ CreateElement.jsx
+ ┃  ┃  ┣ Explore.css
+ ┃  ┃  ┣ Explore.jsx
+ ┃  ┃  ┣ Footer.css
+ ┃  ┃  ┣ Footer.jsx
+ ┃  ┃  ┣ HeroSection.jsx
+ ┃  ┃  ┣ Home.jsx
+ ┃  ┃  ┣ Login.css
+ ┃  ┃  ┣ Login.jsx
+ ┃  ┃  ┣ main.jsx
+ ┃  ┃  ┣ MyProfile.css
+ ┃  ┃  ┣ MyProfile.jsx
+ ┃  ┃  ┣ NavigationBar.css
+ ┃  ┃  ┣ NavigationBar.jsx
+ ┃  ┃  ┣ signup.css
+ ┃  ┃  ┣ Signup.jsx
+ ┃  ┃  ┗ SnippetGrid.css
+ ┃  ┣ .eslintrc.cjs
+ ┃  ┣ .gitignore
+ ┃  ┣ index.html
+ ┃  ┣ package-lock.json
+ ┃  ┣ package.json
+ ┃  ┣ README.md
+ ┃  ┗ vite.config.js
+ ┗ server
+    ┣ model
+    ┃  ┣ Element.js
+    ┃  ┣ SampleModel.js
+    ┃  ┗ User.js
+    ┣ index.js
+    ┣ package-lock.json
+    ┗ package.json

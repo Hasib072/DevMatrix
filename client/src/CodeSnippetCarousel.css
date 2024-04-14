@@ -1,0 +1,88 @@
+/* CodeSnippet.css */
+
+.carousel-container {
+    position: relative;
+    left: -250px;
+    width: 1920px;
+    height: 400px; /* Set a fixed height appropriate for your content */
+    padding: 20px; /* Padding around the inner content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    overflow: hidden; /* Ensures content does not flow outside the border */
+    
+}
+
+.snippet{
+    margin-right: 20px;
+}
+
+.carousel-container iframe {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Softer shadow for the iframe */
+    width: 90%; /* Width relative to the container for a nice padding effect */
+    height: 85%; /* Adjust the height to ensure all content is visible */
+    border: none; /* Remove default border */
+}
+
+.carousel-controls {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.carousel-controls i {
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+    position: relative;
+    top: 150px;
+}
+
+.next{
+    right: 0px;
+    background: rgb(33,33,33);
+    background: linear-gradient(270deg, rgba(33,33,33,1) 40%, rgba(255,255,255,0) 100%);
+}
+
+.next i{
+    
+    left: 320px;
+    
+}
+
+.prev{
+    left: 0px;
+    background: rgb(33,33,33);
+    background: linear-gradient(90deg, rgba(33,33,33,1) 40%, rgba(255,255,255,0) 100%);
+    
+}
+
+.prev i{
+    
+    left: 50px;
+    
+}
+.carousel-controls button {
+    
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007BFF; /* Bootstrap primary blue for consistency */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-controls button:hover {
+    background-color: #0056b3; /* Darken button on hover for better interaction feedback */
+}
+
+.carousel-controls button:focus {
+    outline: none; /* Remove focus outline to maintain styling */
+}

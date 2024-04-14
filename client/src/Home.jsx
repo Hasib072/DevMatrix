@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from 'react-router-dom';
 import NavigationBar from "./NavigationBar";
+import HeroSection from "./HeroSection";
+import TopPicks from "./TopPicks";
+import AboutUs from "./AboutUs";
 import Footer from "./Footer";
 import axios from 'axios';
 
@@ -62,12 +65,38 @@ function Home(){
     }, [username]);
     
     console.log(username);
+
+    useEffect(() => {
+      const fetchElements = async () => {
+          setIsLoading(true);
+          
+          try {
+              const response = await axios.get(`http://localhost:3001/elements`);
+              setUserElements(response.data);
+          } catch (error) {
+              console.error('Error fetching elements:', error);
+          } finally {
+              // Ensure that the loader shows for at least 2 seconds
+              setTimeout(() => {
+                  setIsLoading(false);
+                  setLoadingDelayPassed(true);
+              }, 5000);
+              console.log("Fetchcth Elements");
+          }
+      };
+
+      
+          fetchElements();
+      
+  }, [username]);
+
     return(
         <div>
           <NavigationBar user={profileData}/>
-            <h1>
-                This is Home Component
-            </h1>
+          
+          <HeroSection/>
+          <TopPicks snippets={userElements} />
+          <AboutUs/>
           <Footer/>
         </div>
     )
