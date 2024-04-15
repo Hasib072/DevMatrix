@@ -1,0 +1,13 @@
+.code-editor-and-preview {
+    display: flex;
+    height: 100vh; /* Use a different value as needed */
+  }
+  
+  .editor-container,
+  .preview-container {
+    flex: 1;
+    overflow: hidden; /* Optional, for neat scrolling if your content overflows */
+  }
+  
+  /* Additional styling as per your design requirements */
+  

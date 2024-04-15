@@ -107,6 +107,20 @@ app.get("/elements/by-user", (req, res) => {
       .catch(err => res.status(500).json(err));
   });
 
+  app.get("/elements/by-id", (req, res) => {
+    // Extract user_name from the request query parameters
+    const element_id = req.query._id;
+    // Check if user_name was provided
+    if (!element_id) {
+      return res.status(400).json({ error: "element_id query parameter is required" });
+    }
+  
+    // Find elements by user_name
+    ElementModel.find({ _id: element_id })
+      .then(elements => res.json(elements))
+      .catch(err => res.status(500).json(err));
+  });
+
   app.delete("/delelements", (req, res) => {
     // Extract user_name and element_name from query parameters
     const { user_name, element_name } = req.query;

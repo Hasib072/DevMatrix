@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import './SnippetGrid.css';
 import { Link, useNavigate } from "react-router-dom";
 
-const CodeSnippet = ({element_username, element_name, element_html, element_css, element_background, element_background2 }) => {
+const CodeSnippet = ({element_id, element_username, element_name, element_html, element_css, element_background, element_background2 }) => {
 
   if (!element_background){
     element_background = "#2b2b2b";
@@ -12,9 +12,9 @@ const CodeSnippet = ({element_username, element_name, element_html, element_css,
   }
 
   let navigate = useNavigate();
-    const goToMyProfile = (user) => {
-        //console.log(element_username + element_name);
-        navigate("/preview", { state: { username: user } });
+    const goToMyProfile = (_id) => {
+        console.log(element_username + element_name + " ID : "+ _id);
+        navigate("/preview", { state: { username: element_username, element_id: _id } });
       };
   
       useEffect(() => {
@@ -166,7 +166,7 @@ const CodeSnippet = ({element_username, element_name, element_html, element_css,
           if (event.target === document.body) {
             console.log('Body clicked');
             // If you need to communicate with the parent document:
-            window.parent.postMessage('${element_username}', 'http://localhost:5173'); // Replace '*' with your domain in production
+            window.parent.postMessage('${element_id}', 'http://localhost:5173'); // Replace '*' with your domain in production
           }
         });
       });
@@ -179,6 +179,7 @@ const CodeSnippet = ({element_username, element_name, element_html, element_css,
   return (
     <div className="snippet-container" onClick={goToMyProfile}>
       <iframe
+      element_id={element_id}
         element_username={element_username}
         element_name={element_name}
         srcDoc={fullHtml}

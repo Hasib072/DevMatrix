@@ -2,11 +2,16 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from 'react-router-dom';
 import './ElementPreview.css';
 import NavigationBar from './NavigationBar';
+import CodeEditorAndPreview from './CodeEditorAndPreview';
+import axios from 'axios';
+
 
 const ElementPreview = () => {
 
     const location = useLocation();
     const { username } = location.state || {}; // Fallback to an empty object if state is undefined
+    const { element_id } = location.state || {}; // Fallback to an empty object if state is undefined
+
     if (!username) {
         console.log("No user");
         // setTimeout(() => {
@@ -67,9 +72,32 @@ const ElementPreview = () => {
         }
     }, [username]);
 
+    const [userElement, setUserElement] = useState([]);
+
+    useEffect(() => {
+        const fetchElements = async () => {
+            try {
+                const response = await axios.get(`http://localhost:3001/elements/by-id?_id=${element_id}`);
+                setUserElement(response.data[0]);
+                console.log('Fetched data:', response.data);
+            } catch (error) {
+                console.error('Error fetching elements:', error);
+            }
+        };
+    
+        fetchElements();
+    }, [username]); // This should probably be element_id in the dependency array, not username
+    
+    // Additionally, if you want to check the updated state, you can use another useEffect
+    useEffect(() => {
+        console.log('userElement state updated:', userElement);
+        console.log('userElement.element_html updated:', userElement.element_html);
+    }, [userElement]);
+
   return (
     <div>
       <NavigationBar user={profileData} />
+      <CodeEditorAndPreview element={userElements} />
     </div>
   );
 };

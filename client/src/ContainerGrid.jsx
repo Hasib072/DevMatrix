@@ -28,6 +28,7 @@ return (
     {shuffledSnippets.map((snippet, index) => (
       <CodeSnippet
         key={index}
+        element_id={snippet._id}
         element_username={snippet.user_name}
         element_name={snippet.element_name}
         element_html={snippet.element_html}
