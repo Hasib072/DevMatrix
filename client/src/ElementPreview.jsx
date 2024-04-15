@@ -97,7 +97,7 @@ const ElementPreview = () => {
   return (
     <div>
       <NavigationBar user={profileData} />
-      <CodeEditorAndPreview element={userElements} />
+      <CodeEditorAndPreview element={element_id} />
     </div>
   );
 };

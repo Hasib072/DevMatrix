@@ -4,15 +4,15 @@ import './CodeEditorAndPreview.css'; // CSS file for styling
 import { useLocation } from 'react-router-dom';
 
 
-const CodeEditorAndPreview = ({ element_html }) => {
+const CodeEditorAndPreview = ({ element }) => {
 
     const location = useLocation();
     const { username } = location.state || {}; // Fallback to an empty object if state is undefined
     const { element_id } = location.state || {}; // Fallback to an empty object if state is undefined
 
 
-    console.log("Element HTML : " + element_html);
-    const [code, setCode] = useState(element_html || '<p>Hello World!</p>');
+    console.log("Element HTML : " + element);
+    const [code, setCode] = useState(element);
   
   // Function to handle code changes
   const handleEditorChange = (value) => {
