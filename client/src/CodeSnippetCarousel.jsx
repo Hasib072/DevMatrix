@@ -72,12 +72,12 @@ const CodeSnippetCarousel = ({ snippets }) => {
                 
                 .icon--moon {
                   transition-delay: 200ms;
+                  color: #ffffff;
                 }
                 
                 .icon--sun {
                   transform: scale(0);
-                  color: #2b2b2b;
-                  shadow: 1px solid black;
+                  color: #000000;
                 }
                 
                 #switch:checked + .icon--moon {

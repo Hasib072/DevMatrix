@@ -28,7 +28,7 @@
 
 .carousel-controls {
     position: absolute;
-    width: 400px;
+    width: 300px;
     height: 400px;
     display: flex;
     justify-content: space-between;
@@ -51,7 +51,7 @@
 
 .next i{
     
-    left: 320px;
+    left: 230px;
     
 }
 

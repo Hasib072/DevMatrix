@@ -13,8 +13,11 @@ import React, { useState, useEffect } from 'react';
 import CodeSnippet from './CodeSnippet';
 import './SnippetGrid.css';
 
+
+
 const ContainerGrid = ({ snippets }) => {
 const [shuffledSnippets, setShuffledSnippets] = useState([]);
+
 
 useEffect(() => {
   setShuffledSnippets(shuffleArray(snippets));
@@ -25,6 +28,7 @@ return (
     {shuffledSnippets.map((snippet, index) => (
       <CodeSnippet
         key={index}
+        element_username={snippet.user_name}
         element_name={snippet.element_name}
         element_html={snippet.element_html}
         element_css={snippet.element_css}

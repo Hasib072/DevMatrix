@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 import './SnippetGrid.css';
+import { Link, useNavigate } from "react-router-dom";
 
-const CodeSnippet = ({ element_name, element_html, element_css, element_background, element_background2 }) => {
+const CodeSnippet = ({element_username, element_name, element_html, element_css, element_background, element_background2 }) => {
 
   if (!element_background){
     element_background = "#2b2b2b";
@@ -9,6 +10,31 @@ const CodeSnippet = ({ element_name, element_html, element_css, element_backgrou
   if (!element_background2){
     element_background2 = "#d9d9d9";
   }
+
+  let navigate = useNavigate();
+    const goToMyProfile = (user) => {
+        //console.log(element_username + element_name);
+        navigate("/preview", { state: { username: user } });
+      };
+  
+      useEffect(() => {
+        const handleMessage = (event) => {
+          // Check the origin of the message
+          console.log(event.origin + " Data: " + event.data);
+          
+            if (event.data) {
+              console.log('The iframe body was clicked');
+              goToMyProfile(event.data);
+            }
+          
+        };
+      
+        window.addEventListener('message', handleMessage);
+      
+        return () => {
+          window.removeEventListener('message', handleMessage);
+        };
+      }, []);
 
   // Create a complete HTML document with centered body content
   const fullHtml = `
@@ -133,6 +159,16 @@ const CodeSnippet = ({ element_name, element_html, element_css, element_backgrou
             document.body.classList.remove('dark-mode');
           }
         });
+  
+        // Add click event listener to the iframe's document
+        document.body.addEventListener('click', function(event) {
+          // Check if the click target is the body itself, not a child element
+          if (event.target === document.body) {
+            console.log('Body clicked');
+            // If you need to communicate with the parent document:
+            window.parent.postMessage('${element_username}', 'http://localhost:5173'); // Replace '*' with your domain in production
+          }
+        });
       });
     </script>
     
@@ -141,9 +177,10 @@ const CodeSnippet = ({ element_name, element_html, element_css, element_backgrou
   `;
 
   return (
-    <div className="snippet-container">
-      <iframe 
-        element_name="Preview"
+    <div className="snippet-container" onClick={goToMyProfile}>
+      <iframe
+        element_username={element_username}
+        element_name={element_name}
         srcDoc={fullHtml}
         style={{ width: '100%', height: '100%', border: 'none' }}
         sandbox="allow-scripts" // Sandbox for security reasons

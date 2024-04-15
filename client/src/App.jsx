@@ -8,6 +8,7 @@ import Home from './Home'
 import CreateElement from './CreateElement'
 import MyProfile from './MyProfile'
 import Explore from './Explore'
+import ElementPreview from './ElementPreview'
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path='/create' element={<CreateElement />}/>
         <Route path='/myprofile' element={<MyProfile/>}/>
         <Route path="/explore" element={<Explore/>}/>
+        <Route path="/preview" element={<ElementPreview/>}/>
         <Route path="/" element={<Home/>}/>
       </Routes>
     </BrowserRouter>

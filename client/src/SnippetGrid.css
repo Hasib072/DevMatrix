@@ -40,6 +40,16 @@
     height: 300px; /* Set a fixed height */
     width: 100%; /* Ensures the container takes up all available column width */
   }
+
+  .clickable-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10; /* Higher than the iframe but lower than other content */
+    cursor: pointer; /* Change cursor to indicate clickability */
+  }
   
   .toggle {
   background-color: #fff;
