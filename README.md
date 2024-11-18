@@ -1,5 +1,6 @@
 
-![DevMatrix_logo (1) (1) 1](https://github.com/user-attachments/assets/7eeefbcc-d950-4213-8a39-78a598c22868)
+![DevMatrix_logo (1) (4) 1](https://github.com/user-attachments/assets/74a844b2-bc61-4fd3-98fe-672f47839e71)
+
 
 # Figma Link: 
 
